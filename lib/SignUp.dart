@@ -54,6 +54,13 @@ class SignUp extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 24.0),
+            const TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                labelText: 'Confirm your password',
+              ),
+            ),
+            const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () {
                 // Perform sign up logic here
