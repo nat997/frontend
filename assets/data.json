@@ -1,0 +1,12 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"somebody",
+            "mail":"something@somethingelse.com",
+            "username":"somethingsomething",
+            "password":"disizsomepassword",
+            "islogged":"true"
+        }
+    ]
+}

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:mft/SignUp.dart';
 import 'HomePage.dart';
-import 'LoginPage.dart';
+import 'SignIn.dart';
 
 final _router = GoRouter(routes: [
   GoRoute(
@@ -9,8 +10,12 @@ final _router = GoRouter(routes: [
     pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
   ),
   GoRoute(
-      path: '/LoginPage',
-      pageBuilder: (context, state) => const MaterialPage(child: LoginPage())),
+      path: '/SignIn',
+      pageBuilder: (context, state) => const MaterialPage(child: SignIn())),
+  GoRoute(
+    path: '/SignUp',
+    pageBuilder: (context, state) => const MaterialPage(child: SignUp()),
+  )
 ]);
 
 void main() {

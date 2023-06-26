@@ -19,14 +19,14 @@ class HomePage extends StatelessWidget {
             const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () {
-                // Perform sign up logic here
+                GoRouter.of(context).go('/SignUp');
               },
               child: const Text('Sign up'),
             ),
             const SizedBox(height: 16.0),
             OutlinedButton(
               onPressed: () {
-                GoRouter.of(context).go('/LoginPage');
+                GoRouter.of(context).go('/SignIn');
               },
               child: const Text('Sign in'),
             ),

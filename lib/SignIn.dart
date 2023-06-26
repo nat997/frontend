@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class SignIn extends StatelessWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login Page'),
-        backgroundColor:
-            const Color(0xff07757d), // update appbar background color
+        title: const Text('Sign In'),
+        backgroundColor: const Color(0xff07757d),
         iconTheme: const IconThemeData(color: Colors.white),
         leading: IconButton(
           onPressed: () {
@@ -18,12 +17,12 @@ class LoginPage extends StatelessWidget {
           },
           icon: const Icon(Icons.arrow_back_ios_new),
         ),
-        toolbarTextStyle: const TextTheme(
-          titleLarge: TextStyle(color: Colors.white), // update text color
-        ).bodyMedium,
-        titleTextStyle: const TextTheme(
-          titleLarge: TextStyle(color: Colors.white), // update text color
-        ).titleLarge,
+        toolbarTextStyle: const TextStyle(
+          color: Colors.white,
+        ),
+        titleTextStyle: const TextStyle(
+          color: Colors.white,
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -45,9 +44,19 @@ class LoginPage extends StatelessWidget {
             const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: () {
-                // Perform login logic here
+                // Perform sign in logic here
               },
-              child: const Text('Login'),
+              child: const Text('Sign In'),
+            ),
+            const SizedBox(height: 16.0),
+            GestureDetector(
+              onTap: () {
+                GoRouter.of(context).go('/SignUp');
+              },
+              child: const Text(
+                "Don't have an account ? Sign Up",
+                style: TextStyle(decoration: TextDecoration.underline),
+              ),
             ),
           ],
         ),
