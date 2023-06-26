@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'HomePage.dart';
 import 'LoginPage.dart';
 
 final _router = GoRouter(routes: [
   GoRoute(
-      path: '/',
+    path: '/',
+    pageBuilder: (context, state) => const MaterialPage(child: HomePage()),
+  ),
+  GoRoute(
+      path: '/LoginPage',
       pageBuilder: (context, state) => const MaterialPage(child: LoginPage())),
 ]);
 
